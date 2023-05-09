@@ -10,7 +10,6 @@
 		1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */; };
 		1A44F76F2A0A2A0700234B94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */; };
 		1A44F7712A0A2A0700234B94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7702A0A2A0700234B94 /* ChatViewController.swift */; };
-		1A44F7742A0A2A0700234B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7722A0A2A0700234B94 /* Main.storyboard */; };
 		1A44F7762A0A2A0900234B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7752A0A2A0900234B94 /* Assets.xcassets */; };
 		1A44F7792A0A2A0900234B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7772A0A2A0900234B94 /* LaunchScreen.storyboard */; };
 		1A44F7812A0A2AAF00234B94 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7802A0A2AAF00234B94 /* APIKey.plist */; };
@@ -25,7 +24,6 @@
 		1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1A44F7702A0A2A0700234B94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		1A44F7732A0A2A0700234B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A44F7752A0A2A0900234B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A44F7782A0A2A0900234B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A44F77A2A0A2A0900234B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				1A44F78D2A0A58BC00234B94 /* Models */,
 				1A44F78E2A0A5A2E00234B94 /* Views */,
 				1A44F78F2A0A5A3400234B94 /* Controllors */,
-				1A44F7722A0A2A0700234B94 /* Main.storyboard */,
 				1A44F7752A0A2A0900234B94 /* Assets.xcassets */,
 				1A44F7772A0A2A0900234B94 /* LaunchScreen.storyboard */,
 				1A44F77A2A0A2A0900234B94 /* Info.plist */,
@@ -175,7 +172,6 @@
 				1A44F7792A0A2A0900234B94 /* LaunchScreen.storyboard in Resources */,
 				1A44F7812A0A2AAF00234B94 /* APIKey.plist in Resources */,
 				1A44F7762A0A2A0900234B94 /* Assets.xcassets in Resources */,
-				1A44F7742A0A2A0700234B94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A44F7722A0A2A0700234B94 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A44F7732A0A2A0700234B94 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A44F7772A0A2A0900234B94 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -344,7 +332,6 @@
 				INFOPLIST_FILE = ChatBot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -354,9 +341,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.portpolio.yvrho.ChatBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -372,7 +362,6 @@
 				INFOPLIST_FILE = ChatBot/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -382,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.portpolio.yvrho.ChatBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
