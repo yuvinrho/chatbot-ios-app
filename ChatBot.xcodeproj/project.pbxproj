@@ -19,6 +19,9 @@
 		1A44F78A2A0A586400234B94 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7892A0A586400234B94 /* Usage.swift */; };
 		1A44F7982A0A60F300234B94 /* ChatBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7972A0A60F300234B94 /* ChatBotTests.swift */; };
 		1A44F79F2A0A613C00234B94 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F79E2A0A613C00234B94 /* TestData.swift */; };
+		1A44F7A22A0A6EF300234B94 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */; };
+		1A44F7A52A0A6FAC00234B94 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */; };
+		1AD12DC52A0AA3AC00037574 /* RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC42A0AA3AC00037574 /* RequestBody.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		1A44F7952A0A60F200234B94 /* ChatBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A44F7972A0A60F300234B94 /* ChatBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotTests.swift; sourceTree = "<group>"; };
 		1A44F79E2A0A613C00234B94 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		1AD12DC42A0AA3AC00037574 /* RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBody.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1A44F7902A0A5A6C00234B94 /* Supporting Files */,
+				1A44F7A02A0A6ED700234B94 /* Networking */,
 				1A44F78D2A0A58BC00234B94 /* Models */,
 				1A44F78E2A0A5A2E00234B94 /* Views */,
 				1A44F78F2A0A5A3400234B94 /* Controllors */,
@@ -107,6 +114,7 @@
 				1A44F7852A0A584D00234B94 /* Choice.swift */,
 				1A44F7872A0A585800234B94 /* Message.swift */,
 				1A44F7892A0A586400234B94 /* Usage.swift */,
+				1AD12DC42A0AA3AC00037574 /* RequestBody.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +150,15 @@
 				1A44F79E2A0A613C00234B94 /* TestData.swift */,
 			);
 			path = ChatBotTests;
+			sourceTree = "<group>";
+		};
+		1A44F7A02A0A6ED700234B94 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */,
+				1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +265,11 @@
 				1A44F7712A0A2A0700234B94 /* ChatViewController.swift in Sources */,
 				1A44F7862A0A584D00234B94 /* Choice.swift in Sources */,
 				1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */,
+				1AD12DC52A0AA3AC00037574 /* RequestBody.swift in Sources */,
 				1A44F7882A0A585800234B94 /* Message.swift in Sources */,
 				1A44F78A2A0A586400234B94 /* Usage.swift in Sources */,
+				1A44F7A22A0A6EF300234B94 /* NetworkManager.swift in Sources */,
+				1A44F7A52A0A6FAC00234B94 /* NetworkError.swift in Sources */,
 				1A44F76F2A0A2A0700234B94 /* SceneDelegate.swift in Sources */,
 				1A44F7842A0A56A100234B94 /* ChatDTO.swift in Sources */,
 			);
