@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */; };
 		1A44F76F2A0A2A0700234B94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */; };
-		1A44F7712A0A2A0700234B94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7702A0A2A0700234B94 /* ViewController.swift */; };
+		1A44F7712A0A2A0700234B94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7702A0A2A0700234B94 /* ChatViewController.swift */; };
 		1A44F7742A0A2A0700234B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7722A0A2A0700234B94 /* Main.storyboard */; };
 		1A44F7762A0A2A0900234B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7752A0A2A0900234B94 /* Assets.xcassets */; };
 		1A44F7792A0A2A0900234B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7772A0A2A0900234B94 /* LaunchScreen.storyboard */; };
 		1A44F7812A0A2AAF00234B94 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7802A0A2AAF00234B94 /* APIKey.plist */; };
+		1A44F7842A0A56A100234B94 /* ChatDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7832A0A56A100234B94 /* ChatDTO.swift */; };
+		1A44F7862A0A584D00234B94 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7852A0A584D00234B94 /* Choice.swift */; };
+		1A44F7882A0A585800234B94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7872A0A585800234B94 /* Message.swift */; };
+		1A44F78A2A0A586400234B94 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7892A0A586400234B94 /* Usage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A44F7692A0A2A0700234B94 /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1A44F7702A0A2A0700234B94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A44F7702A0A2A0700234B94 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		1A44F7732A0A2A0700234B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A44F7752A0A2A0900234B94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A44F7782A0A2A0900234B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A44F77A2A0A2A0900234B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A44F7802A0A2AAF00234B94 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
+		1A44F7832A0A56A100234B94 /* ChatDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDTO.swift; sourceTree = "<group>"; };
+		1A44F7852A0A584D00234B94 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
+		1A44F7872A0A585800234B94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1A44F7892A0A586400234B94 /* Usage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +66,10 @@
 		1A44F76B2A0A2A0700234B94 /* ChatBot */ = {
 			isa = PBXGroup;
 			children = (
-				1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */,
-				1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */,
-				1A44F7702A0A2A0700234B94 /* ViewController.swift */,
+				1A44F7902A0A5A6C00234B94 /* Supporting Files */,
+				1A44F78D2A0A58BC00234B94 /* Models */,
+				1A44F78E2A0A5A2E00234B94 /* Views */,
+				1A44F78F2A0A5A3400234B94 /* Controllors */,
 				1A44F7722A0A2A0700234B94 /* Main.storyboard */,
 				1A44F7752A0A2A0900234B94 /* Assets.xcassets */,
 				1A44F7772A0A2A0900234B94 /* LaunchScreen.storyboard */,
@@ -68,6 +77,41 @@
 				1A44F7802A0A2AAF00234B94 /* APIKey.plist */,
 			);
 			path = ChatBot;
+			sourceTree = "<group>";
+		};
+		1A44F78D2A0A58BC00234B94 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A44F7832A0A56A100234B94 /* ChatDTO.swift */,
+				1A44F7852A0A584D00234B94 /* Choice.swift */,
+				1A44F7872A0A585800234B94 /* Message.swift */,
+				1A44F7892A0A586400234B94 /* Usage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A44F78E2A0A5A2E00234B94 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A44F78F2A0A5A3400234B94 /* Controllors */ = {
+			isa = PBXGroup;
+			children = (
+				1A44F7702A0A2A0700234B94 /* ChatViewController.swift */,
+			);
+			path = Controllors;
+			sourceTree = "<group>";
+		};
+		1A44F7902A0A5A6C00234B94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */,
+				1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A44F7712A0A2A0700234B94 /* ViewController.swift in Sources */,
+				1A44F7712A0A2A0700234B94 /* ChatViewController.swift in Sources */,
+				1A44F7862A0A584D00234B94 /* Choice.swift in Sources */,
 				1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */,
+				1A44F7882A0A585800234B94 /* Message.swift in Sources */,
+				1A44F78A2A0A586400234B94 /* Usage.swift in Sources */,
 				1A44F76F2A0A2A0700234B94 /* SceneDelegate.swift in Sources */,
+				1A44F7842A0A56A100234B94 /* ChatDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
