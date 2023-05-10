@@ -21,11 +21,17 @@ final class ChatBotTests: XCTestCase {
     func test_gpt한테_메시지를_보내면_응답이_nil이_아니어야한다() throws {
         let expectation = XCTestExpectation()
 
-        networkManager.sendMessage("Hi, GPT") { result in
+        let body = RequestBody(messages: [Message(role: "user", content: "HI, GPT")])
+
+        networkManager.request(url: OpenAIAPI.chat.url,
+                               method: OpenAIAPI.chat.method,
+                               headers: OpenAIAPI.chat.headers,
+                               body: body) { (result: Result<ChatDTO, Error>) in
             switch result {
             case .success(let responseMessage):
+                print(responseMessage.choices[0].message.content)
                 XCTAssertNotNil(responseMessage)
-            case .failure:
+            case .failure(_):
                 XCTFail()
             }
 
