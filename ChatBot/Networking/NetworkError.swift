@@ -12,7 +12,6 @@ enum NetworkError: Error {
     case invalidResponse
     case unknown
     case requestFailed(statusCode: Int)
-    case decodeFailed
     case invalidRequest
 }
 
@@ -27,8 +26,6 @@ extension NetworkError: LocalizedError {
             return "알 수 없는 에러입니다."
         case .requestFailed(let statusCode):
             return "HTTP요청 실패. 에러코드: \(statusCode)"
-        case .decodeFailed:
-            return "데이터 디코딩 실패."
         case .invalidRequest:
             return "유효하지 않은 요청입니다."
         }

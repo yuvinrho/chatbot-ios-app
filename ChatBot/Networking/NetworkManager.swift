@@ -7,21 +7,6 @@
 
 import Foundation
 
-private var apiKey: String {
-    get {
-        guard let filePath = Bundle.main.path(forResource: "APIKey", ofType: "plist") else {
-            fatalError("Couldn't find file 'APIKey.plist'.")
-        }
-
-        let plist = NSDictionary(contentsOfFile: filePath)
-        guard let value = plist?.object(forKey: "API Key") as? String else {
-            fatalError("Couldn't find key 'API Key' in 'APIKey.plist'.")
-        }
-
-        return value
-    }
-}
-
 struct NetworkManager {
     private let session: URLSession
 
@@ -29,34 +14,37 @@ struct NetworkManager {
         self.session = session
     }
 
-    private func createRequest(with message: String) -> URLRequest? {
-        guard let url = URL(string: "https://api.openai.com/v1/chat/completions") else {
-            return nil
-        }
+    func request<T: Decodable>(url: String,
+                               method: HTTPMethod,
+                               headers: [String: String]?,
+                               body: Encodable?,
+                               completion: @escaping (Result<T, Error>) -> Void) {
 
-        var request = URLRequest(url: url)
-        request.httpMethod = "post"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-
-        let parameters = RequestBody(messages: [Message(role: "user", content: "\(message)")])
-        guard let encodedData = try? JSONEncoder().encode(parameters) else {
-            return nil
-        }
-
-        request.httpBody = encodedData
-
-        return request
-    }
-
-    func sendMessage(_ message: String, completion: @escaping (Result<Message, Error>) -> Void) {
-        guard let request = createRequest(with: message) else {
-            completion(.failure(NetworkError.invalidRequest))
+        guard let url = URL(string: url) else {
+            completion(.failure(NetworkError.invalidURL))
             return
         }
 
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            if let error = error {
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+
+        if let body {
+            do {
+                let jsonData = try JSONEncoder().encode(body)
+                request.httpBody = jsonData
+            } catch {
+                completion(.failure(error))
+            }
+        }
+
+        if let headers {
+            for (key, value) in headers {
+                request.setValue(value, forHTTPHeaderField: key)
+            }
+        }
+
+        let task = session.dataTask(with: request) { data, response, error in
+            if let error {
                 completion(.failure(error))
                 return
             }
@@ -71,13 +59,17 @@ struct NetworkManager {
                 return
             }
 
-            guard let data,
-                  let messageResponse = try? JSONDecoder().decode(ChatDTO.self, from: data) else {
-                completion(.failure(NetworkError.decodeFailed))
+            guard let data else {
+                completion(.failure(NetworkError.unknown))
                 return
             }
 
-            completion(.success(messageResponse.choices[0].message))
+            do {
+                let decodedData = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(decodedData))
+            } catch {
+                completion(.failure(error))
+            }
         }
 
         task.resume()
