@@ -95,28 +95,36 @@ final class ChatViewController: UIViewController {
         }
 
         messages.append(inputMessage)
-        tableView.reloadData()
+        updateTableView()
         clearTextField()
-        changeTextFieldRightView(to: loadingIndicator)
+        showLoadingIndicator(true)
 
         chatManager.sendMessage(inputMessage) { [weak self] result in
             switch result {
             case .success(let message):
                 self?.messages.append(message)
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                    self?.changeTextFieldRightView(to: self?.sendButton)
-                }
+                self?.updateTableView()
             case .failure(let error):
-                print(error)
+                self?.messages.append(error.localizedDescription)
+                self?.updateTableView()
             }
         }
     }
 
-    private func changeTextFieldRightView(to view: UIView?) {
-        textField.rightView = view
+    private func updateTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            let lastRowIndex = self.tableView.numberOfRows(inSection: 0) - 1
+            let lastIndexPath = IndexPath(row: lastRowIndex, section: 0)
+            self.tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
+            self.showLoadingIndicator(false)
+        }
     }
 
+    private func showLoadingIndicator(_ flag: Bool) {
+        let rightView = flag ? loadingIndicator : sendButton
+        textField.rightView = rightView
+    }
 }
 
 // MARK: TableView DataSource
