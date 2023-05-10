@@ -8,7 +8,7 @@
 import UIKit
 
 final class ChatViewController: UIViewController {
-    private let networkManager = NetworkManager()
+    private let chatManager = ChatManager()
 
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -54,7 +54,7 @@ final class ChatViewController: UIViewController {
         textField.rightView = sendButton
 
         sendButton.addAction(UIAction(handler: { [weak self] action in
-            self?.sendMessage()
+            self?.touchUpSendButton()
         }), for: .touchUpInside)
 
         view.addSubview(tableView)
@@ -78,7 +78,7 @@ final class ChatViewController: UIViewController {
         textField.resignFirstResponder()
     }
 
-    private func sendMessage() {
+    private func touchUpSendButton() {
         guard let inputMessage = textField.text else {
             return
         }
@@ -87,20 +87,13 @@ final class ChatViewController: UIViewController {
         tableView.reloadData()
         clearTextField()
 
-        let body = ChatRequestDTO(messages: [Message(role: "user", content: inputMessage)])
-
-        networkManager.request(url: OpenAIAPI.chat.url,
-                               method: OpenAIAPI.chat.method,
-                               headers: OpenAIAPI.chat.headers,
-                               body: body) { [weak self] (result: Result<ChatResponseDTO, Error>) in
+        chatManager.sendMessage(inputMessage) { [weak self] result in
             switch result {
-            case .success(let response):
-                self?.messages.append(response.choices[0].message.content)
-
+            case .success(let message):
+                self?.messages.append(message)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
-
             case .failure(let error):
                 print(error)
             }
