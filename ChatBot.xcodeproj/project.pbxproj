@@ -19,11 +19,12 @@
 		1A44F78A2A0A586400234B94 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7892A0A586400234B94 /* Usage.swift */; };
 		1A44F7982A0A60F300234B94 /* ChatBotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7972A0A60F300234B94 /* ChatBotTests.swift */; };
 		1A44F79F2A0A613C00234B94 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F79E2A0A613C00234B94 /* TestData.swift */; };
-		1A44F7A22A0A6EF300234B94 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */; };
+		1A44F7A22A0A6EF300234B94 /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A12A0A6EF300234B94 /* ChatManager.swift */; };
 		1A44F7A52A0A6FAC00234B94 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */; };
 		1AD12DC52A0AA3AC00037574 /* ChatRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC42A0AA3AC00037574 /* ChatRequestDTO.swift */; };
 		1AD12DC72A0B656D00037574 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC62A0B656D00037574 /* HTTPMethod.swift */; };
 		1AD12DC92A0B7A4A00037574 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */; };
+		1AD12DD32A0BF2AA00037574 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DD22A0BF2AA00037574 /* Networkable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +53,12 @@
 		1A44F7952A0A60F200234B94 /* ChatBotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatBotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A44F7972A0A60F300234B94 /* ChatBotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBotTests.swift; sourceTree = "<group>"; };
 		1A44F79E2A0A613C00234B94 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
-		1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1A44F7A12A0A6EF300234B94 /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1AD12DC42A0AA3AC00037574 /* ChatRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestDTO.swift; sourceTree = "<group>"; };
 		1AD12DC62A0B656D00037574 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
+		1AD12DD22A0BF2AA00037574 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,9 +162,10 @@
 		1A44F7A02A0A6ED700234B94 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */,
+				1A44F7A12A0A6EF300234B94 /* ChatManager.swift */,
 				1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */,
 				1AD12DC62A0B656D00037574 /* HTTPMethod.swift */,
+				1AD12DD22A0BF2AA00037574 /* Networkable.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -271,12 +274,13 @@
 				1AD12DC92A0B7A4A00037574 /* OpenAIAPI.swift in Sources */,
 				1A44F7712A0A2A0700234B94 /* ChatViewController.swift in Sources */,
 				1A44F7862A0A584D00234B94 /* Choice.swift in Sources */,
+				1AD12DD32A0BF2AA00037574 /* Networkable.swift in Sources */,
 				1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */,
 				1AD12DC72A0B656D00037574 /* HTTPMethod.swift in Sources */,
 				1AD12DC52A0AA3AC00037574 /* ChatRequestDTO.swift in Sources */,
 				1A44F7882A0A585800234B94 /* Message.swift in Sources */,
 				1A44F78A2A0A586400234B94 /* Usage.swift in Sources */,
-				1A44F7A22A0A6EF300234B94 /* NetworkManager.swift in Sources */,
+				1A44F7A22A0A6EF300234B94 /* ChatManager.swift in Sources */,
 				1A44F7A52A0A6FAC00234B94 /* NetworkError.swift in Sources */,
 				1A44F76F2A0A2A0700234B94 /* SceneDelegate.swift in Sources */,
 				1A44F7842A0A56A100234B94 /* ChatResponseDTO.swift in Sources */,

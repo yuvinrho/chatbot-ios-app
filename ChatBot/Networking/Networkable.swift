@@ -1,20 +1,24 @@
 //
-//  NetworkManager.swift
+//  Networkable.swift
 //  ChatBot
 //
-//  Created by 노유빈 on 2023/05/09.
+//  Created by 노유빈 on 2023/05/11.
 //
 
 import Foundation
 
-struct NetworkManager {
-    private let session: URLSession
-
-    init(session: URLSession = URLSession.shared) {
-        self.session = session
-    }
-
+protocol Networkable {
     func request<T: Decodable>(url: String,
+                               session: URLSession,
+                               method: HTTPMethod,
+                               headers: [String: String]?,
+                               body: Encodable?,
+                               completion: @escaping (Result<T, Error>) -> Void)
+}
+
+extension Networkable {
+    func request<T: Decodable>(url: String,
+                               session: URLSession,
                                method: HTTPMethod,
                                headers: [String: String]?,
                                body: Encodable?,
