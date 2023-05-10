@@ -8,7 +8,9 @@
 import UIKit
 
 final class ChatViewController: UIViewController {
+    // MARK: Properties
     private let chatManager = ChatManager()
+    private var messages: [String] = []
 
     private let tableView: UITableView = {
         let tableView = UITableView()
@@ -22,7 +24,7 @@ final class ChatViewController: UIViewController {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Send a message."
-        textField.backgroundColor = .systemYellow
+        textField.backgroundColor = .systemGray3
         textField.rightViewMode = .always
         textField.borderStyle = .roundedRect
         return textField
@@ -35,17 +37,38 @@ final class ChatViewController: UIViewController {
         return button
     }()
 
-    private var messages: [String] = []
+    private let loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .large)
+        indicator.startAnimating()
+        return indicator
+    }()
 
+    // MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureNavigation()
         configureView()
+        configureConstraints()
     }
 
+    // MARK: Methods
     private func configureNavigation() {
-        navigationItem.title = "chat"
+        navigationItem.title = "AI Chat"
+    }
+
+    private func configureConstraints() {
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            tableView.bottomAnchor.constraint(equalTo: textField.topAnchor, constant: -8),
+
+            textField.heightAnchor.constraint(equalToConstant: 50),
+            textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
+            textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            textField.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
+        ])
     }
 
     private func configureView() {
@@ -59,18 +82,6 @@ final class ChatViewController: UIViewController {
 
         view.addSubview(tableView)
         view.addSubview(textField)
-
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            tableView.bottomAnchor.constraint(equalTo: textField.topAnchor, constant: -8),
-
-            textField.heightAnchor.constraint(equalToConstant: 50),
-            textField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            textField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -8),
-            textField.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
-        ])
     }
 
     private func clearTextField() {
@@ -86,6 +97,7 @@ final class ChatViewController: UIViewController {
         messages.append(inputMessage)
         tableView.reloadData()
         clearTextField()
+        changeTextFieldRightView(to: loadingIndicator)
 
         chatManager.sendMessage(inputMessage) { [weak self] result in
             switch result {
@@ -93,12 +105,18 @@ final class ChatViewController: UIViewController {
                 self?.messages.append(message)
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
+                    self?.changeTextFieldRightView(to: self?.sendButton)
                 }
             case .failure(let error):
                 print(error)
             }
         }
     }
+
+    private func changeTextFieldRightView(to view: UIView?) {
+        textField.rightView = view
+    }
+
 }
 
 // MARK: TableView DataSource
