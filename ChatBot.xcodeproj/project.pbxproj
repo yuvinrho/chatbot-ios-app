@@ -22,6 +22,8 @@
 		1A44F7A22A0A6EF300234B94 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */; };
 		1A44F7A52A0A6FAC00234B94 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */; };
 		1AD12DC52A0AA3AC00037574 /* RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC42A0AA3AC00037574 /* RequestBody.swift */; };
+		1AD12DC72A0B656D00037574 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC62A0B656D00037574 /* HTTPMethod.swift */; };
+		1AD12DC92A0B7A4A00037574 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1AD12DC42A0AA3AC00037574 /* RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBody.swift; sourceTree = "<group>"; };
+		1AD12DC62A0B656D00037574 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 				1A44F7872A0A585800234B94 /* Message.swift */,
 				1A44F7892A0A586400234B94 /* Usage.swift */,
 				1AD12DC42A0AA3AC00037574 /* RequestBody.swift */,
+				1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			children = (
 				1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */,
 				1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */,
+				1AD12DC62A0B656D00037574 /* HTTPMethod.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -262,9 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD12DC92A0B7A4A00037574 /* OpenAIAPI.swift in Sources */,
 				1A44F7712A0A2A0700234B94 /* ChatViewController.swift in Sources */,
 				1A44F7862A0A584D00234B94 /* Choice.swift in Sources */,
 				1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */,
+				1AD12DC72A0B656D00037574 /* HTTPMethod.swift in Sources */,
 				1AD12DC52A0AA3AC00037574 /* RequestBody.swift in Sources */,
 				1A44F7882A0A585800234B94 /* Message.swift in Sources */,
 				1A44F78A2A0A586400234B94 /* Usage.swift in Sources */,
