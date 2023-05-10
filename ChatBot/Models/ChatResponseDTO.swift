@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChatDTO: Decodable {
+struct ChatResponseDTO: Decodable {
     let id: String
     let object: String
     let created: Date

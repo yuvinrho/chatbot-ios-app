@@ -5,7 +5,7 @@
 //  Created by 노유빈 on 2023/05/10.
 //
 
-struct RequestBody: Encodable {
+struct ChatRequestDTO: Encodable {
     let model: String
     let messages: [Message]
 

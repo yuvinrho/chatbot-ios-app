@@ -13,7 +13,7 @@
 		1A44F7762A0A2A0900234B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7752A0A2A0900234B94 /* Assets.xcassets */; };
 		1A44F7792A0A2A0900234B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7772A0A2A0900234B94 /* LaunchScreen.storyboard */; };
 		1A44F7812A0A2AAF00234B94 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A44F7802A0A2AAF00234B94 /* APIKey.plist */; };
-		1A44F7842A0A56A100234B94 /* ChatDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7832A0A56A100234B94 /* ChatDTO.swift */; };
+		1A44F7842A0A56A100234B94 /* ChatResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7832A0A56A100234B94 /* ChatResponseDTO.swift */; };
 		1A44F7862A0A584D00234B94 /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7852A0A584D00234B94 /* Choice.swift */; };
 		1A44F7882A0A585800234B94 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7872A0A585800234B94 /* Message.swift */; };
 		1A44F78A2A0A586400234B94 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7892A0A586400234B94 /* Usage.swift */; };
@@ -21,7 +21,7 @@
 		1A44F79F2A0A613C00234B94 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F79E2A0A613C00234B94 /* TestData.swift */; };
 		1A44F7A22A0A6EF300234B94 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */; };
 		1A44F7A52A0A6FAC00234B94 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */; };
-		1AD12DC52A0AA3AC00037574 /* RequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC42A0AA3AC00037574 /* RequestBody.swift */; };
+		1AD12DC52A0AA3AC00037574 /* ChatRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC42A0AA3AC00037574 /* ChatRequestDTO.swift */; };
 		1AD12DC72A0B656D00037574 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC62A0B656D00037574 /* HTTPMethod.swift */; };
 		1AD12DC92A0B7A4A00037574 /* OpenAIAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,7 @@
 		1A44F7782A0A2A0900234B94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A44F77A2A0A2A0900234B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A44F7802A0A2AAF00234B94 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
-		1A44F7832A0A56A100234B94 /* ChatDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDTO.swift; sourceTree = "<group>"; };
+		1A44F7832A0A56A100234B94 /* ChatResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatResponseDTO.swift; sourceTree = "<group>"; };
 		1A44F7852A0A584D00234B94 /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		1A44F7872A0A585800234B94 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		1A44F7892A0A586400234B94 /* Usage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		1A44F79E2A0A613C00234B94 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		1A44F7A12A0A6EF300234B94 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		1AD12DC42A0AA3AC00037574 /* RequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBody.swift; sourceTree = "<group>"; };
+		1AD12DC42A0AA3AC00037574 /* ChatRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestDTO.swift; sourceTree = "<group>"; };
 		1AD12DC62A0B656D00037574 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,11 +114,11 @@
 		1A44F78D2A0A58BC00234B94 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A44F7832A0A56A100234B94 /* ChatDTO.swift */,
+				1A44F7832A0A56A100234B94 /* ChatResponseDTO.swift */,
 				1A44F7852A0A584D00234B94 /* Choice.swift */,
 				1A44F7872A0A585800234B94 /* Message.swift */,
 				1A44F7892A0A586400234B94 /* Usage.swift */,
-				1AD12DC42A0AA3AC00037574 /* RequestBody.swift */,
+				1AD12DC42A0AA3AC00037574 /* ChatRequestDTO.swift */,
 				1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */,
 			);
 			path = Models;
@@ -273,13 +273,13 @@
 				1A44F7862A0A584D00234B94 /* Choice.swift in Sources */,
 				1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */,
 				1AD12DC72A0B656D00037574 /* HTTPMethod.swift in Sources */,
-				1AD12DC52A0AA3AC00037574 /* RequestBody.swift in Sources */,
+				1AD12DC52A0AA3AC00037574 /* ChatRequestDTO.swift in Sources */,
 				1A44F7882A0A585800234B94 /* Message.swift in Sources */,
 				1A44F78A2A0A586400234B94 /* Usage.swift in Sources */,
 				1A44F7A22A0A6EF300234B94 /* NetworkManager.swift in Sources */,
 				1A44F7A52A0A6FAC00234B94 /* NetworkError.swift in Sources */,
 				1A44F76F2A0A2A0700234B94 /* SceneDelegate.swift in Sources */,
-				1A44F7842A0A56A100234B94 /* ChatDTO.swift in Sources */,
+				1A44F7842A0A56A100234B94 /* ChatResponseDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
