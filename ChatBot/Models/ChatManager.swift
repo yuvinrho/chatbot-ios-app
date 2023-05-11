@@ -1,10 +1,3 @@
-//
-//  NetworkManager.swift
-//  ChatBot
-//
-//  Created by 노유빈 on 2023/05/09.
-//
-
 import Foundation
 
 struct ChatManager: Networkable {

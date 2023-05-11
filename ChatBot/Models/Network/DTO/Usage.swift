@@ -1,10 +1,3 @@
-//
-//  Usage.swift
-//  ChatBot
-//
-//  Created by 노유빈 on 2023/05/09.
-//
-
 struct Usage: Decodable {
     let promptTokens: Int
     let completionTokens: Int

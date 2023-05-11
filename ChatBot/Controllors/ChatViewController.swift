@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  ChatBot
-//
-//  Created by 노유빈 on 2023/05/09.
-//
-
 import UIKit
 
 final class ChatViewController: UIViewController {

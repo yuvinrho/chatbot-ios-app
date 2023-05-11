@@ -1,10 +1,3 @@
-//
-//  RequestBody.swift
-//  ChatBot
-//
-//  Created by 노유빈 on 2023/05/10.
-//
-
 struct ChatRequestDTO: Encodable {
     let model: String
     let messages: [Message]
