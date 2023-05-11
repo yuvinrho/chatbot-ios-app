@@ -101,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				1A44F7902A0A5A6C00234B94 /* Supporting Files */,
-				1A44F7A02A0A6ED700234B94 /* Networking */,
 				1A44F78D2A0A58BC00234B94 /* Models */,
 				1A44F78E2A0A5A2E00234B94 /* Views */,
 				1A44F78F2A0A5A3400234B94 /* Controllors */,
@@ -116,12 +115,8 @@
 		1A44F78D2A0A58BC00234B94 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A44F7832A0A56A100234B94 /* ChatResponseDTO.swift */,
-				1A44F7852A0A584D00234B94 /* Choice.swift */,
-				1A44F7872A0A585800234B94 /* Message.swift */,
-				1A44F7892A0A586400234B94 /* Usage.swift */,
-				1AD12DC42A0AA3AC00037574 /* ChatRequestDTO.swift */,
-				1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */,
+				1A80FEE92A0CC08C006AF906 /* Network */,
+				1A44F7A12A0A6EF300234B94 /* ChatManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,15 +154,28 @@
 			path = ChatBotTests;
 			sourceTree = "<group>";
 		};
-		1A44F7A02A0A6ED700234B94 /* Networking */ = {
+		1A80FEE82A0CC007006AF906 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				1A44F7A12A0A6EF300234B94 /* ChatManager.swift */,
+				1A44F7832A0A56A100234B94 /* ChatResponseDTO.swift */,
+				1A44F7852A0A584D00234B94 /* Choice.swift */,
+				1A44F7872A0A585800234B94 /* Message.swift */,
+				1A44F7892A0A586400234B94 /* Usage.swift */,
+				1AD12DC42A0AA3AC00037574 /* ChatRequestDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		1A80FEE92A0CC08C006AF906 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1A80FEE82A0CC007006AF906 /* DTO */,
 				1A44F7A42A0A6FAC00234B94 /* NetworkError.swift */,
 				1AD12DC62A0B656D00037574 /* HTTPMethod.swift */,
 				1AD12DD22A0BF2AA00037574 /* Networkable.swift */,
+				1AD12DC82A0B7A4A00037574 /* OpenAIAPI.swift */,
 			);
-			path = Networking;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
