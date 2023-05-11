@@ -103,22 +103,22 @@ final class ChatViewController: UIViewController {
             switch result {
             case .success(let message):
                 self?.messages.append(message)
-                self?.updateTableView()
             case .failure(let error):
                 self?.messages.append(error.localizedDescription)
+            }
+
+            DispatchQueue.main.async {
                 self?.updateTableView()
+                self?.showLoadingIndicator(false)
             }
         }
     }
 
     private func updateTableView() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            let lastRowIndex = self.tableView.numberOfRows(inSection: 0) - 1
-            let lastIndexPath = IndexPath(row: lastRowIndex, section: 0)
-            self.tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
-            self.showLoadingIndicator(false)
-        }
+        self.tableView.reloadData()
+        let lastRowIndex = self.tableView.numberOfRows(inSection: 0) - 1
+        let lastIndexPath = IndexPath(row: lastRowIndex, section: 0)
+        self.tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
     }
 
     private func showLoadingIndicator(_ flag: Bool) {
