@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A37728B2A122DF4001100C1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A37728A2A122DF4001100C1 /* ChatView.swift */; };
 		1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */; };
 		1A44F76F2A0A2A0700234B94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */; };
 		1A44F7712A0A2A0700234B94 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A44F7702A0A2A0700234B94 /* ChatViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A37728A2A122DF4001100C1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		1A44F7692A0A2A0700234B94 /* ChatBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A44F76C2A0A2A0700234B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A44F76E2A0A2A0700234B94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		1A44F78E2A0A5A2E00234B94 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1A37728A2A122DF4001100C1 /* ChatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				1A44F76D2A0A2A0700234B94 /* AppDelegate.swift in Sources */,
 				1AD12DC72A0B656D00037574 /* HTTPMethod.swift in Sources */,
 				1AD12DC52A0AA3AC00037574 /* ChatRequestDTO.swift in Sources */,
+				1A37728B2A122DF4001100C1 /* ChatView.swift in Sources */,
 				1A44F7882A0A585800234B94 /* Message.swift in Sources */,
 				1A44F78A2A0A586400234B94 /* Usage.swift in Sources */,
 				1A44F7A22A0A6EF300234B94 /* ChatManager.swift in Sources */,
